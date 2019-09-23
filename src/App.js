@@ -115,36 +115,36 @@ class App extends Component {
   render() {
     return (
       <div>
-        <ApplyPopup modal={this.state.modal} submit={this.applyListing} toggle={this.toggle} header={"Apply Listing"} inProgress={this.state.inProgress} />
+        <ApplyPopup modal={this.state.modal} submit={this.applyListing} toggle={this.toggle} header={"申请上榜"} inProgress={this.state.inProgress} />
         <div className="container text-center">
           <br />
-          <p className="h2">Substrate TCR</p>
+          <p className="h2">币排行---温哥华2019度八大私房菜</p>
           <br />
           <div className="alert alert-primary text-left">
             <div>
               <div className="alert alert-success">
-                Chain: <b>{this.state.connection.chain}</b>; Node Name: <b>{this.state.connection.name}</b>; Version: <b>{this.state.connection.version}</b>
+                排行链: <b>{this.state.connection.chain}</b>; 节点: <b>{this.state.connection.name}</b>; 版本: <b>{this.state.connection.version}</b>
               </div>
               <Row>
                 <Col>
-                  <p><b>TCR Parameters</b></p>
-                  <p>Minimum Deposit (tokens): <b>{this.state.tcrDetails.minDeposit}</b></p>
-                  <p>Apply Stage Period (seconds): <b>{this.state.tcrDetails.applyStageLen}</b></p>
-                  <p>Commit Stage Period (seconds): <b>{this.state.tcrDetails.commitStageLen}</b></p>
+                  <p><b>币排行通证经济</b></p>
+                  <p>申请保证金（最少PHB): <b>{this.state.tcrDetails.minDeposit}</b></p>
+                  <p>申请时长 (秒): <b>{this.state.tcrDetails.applyStageLen}</b></p>
+                  <p>投票评选时长 (秒): <b>{this.state.tcrDetails.commitStageLen}</b></p>
                 </Col>
                 <Col>
-                  <p><b>Passphrase</b></p>
+                  <p><b>申请时间</b></p>
                   <Row>
                     <Col xs="10">
                       <input type="text" name="seed" id="seed" className="form-control" value={this.state.seed} onChange={this.handleSeedChange.bind(this)} />
                     </Col>
                     <Col xs="2">
-                      <button className="btn btn-primary" onClick={this.saveSeed.bind(this)}>Save</button>
+                      <button className="btn btn-primary" onClick={this.saveSeed.bind(this)}>保存</button>
                     </Col>
                   </Row>
                   <Row>
                     <Col>
-                      Token Balance: <b>{this.state.balance}</b>
+                      余额: <b>{this.state.balance}</b>
                     </Col>
                   </Row>
                 </Col>
@@ -153,9 +153,9 @@ class App extends Component {
           </div>
           <br />
           <div className="container text-left">
-            <span className="h3">Listings</span>
-            <button className="btn btn-secondary float-right" style={{ marginLeft: 10 }} type="button" onClick={this.handleSubmit}>Refresh Listings</button>
-            <button className="btn btn-primary float-right" onClick={this.toggle}>Apply Listing</button>
+            <span className="h3">币排行榜单</span>
+            <button className="btn btn-secondary float-right" style={{ marginLeft: 10 }} type="button" onClick={this.handleSubmit}>更新榜单</button>
+            <button className="btn btn-primary float-right" onClick={this.toggle}>申请上榜</button>
             <br /><br /><br />
             <div className="text-left">
               <Listings list={this.state.listings} />
