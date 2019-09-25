@@ -1,6 +1,6 @@
 # Substrate TCR UI
 
-![tcr-ui-screenshot](./img/币排行截图)
+![tcr-ui-screenshot](./img/币排行)
 ![tcr-ui-screenshot](./img/tcr-ui.png)
 
 Simple frontend for the [substrate TCR](https://github.com/gautamdhameja/substrate-tcr) runtime. This is a react.js app, bootstrapped using [Create React App](https://github.com/facebook/create-react-app).
